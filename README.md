@@ -29,7 +29,7 @@ in the [documentation](https://learn.microsoft.com/en-us/cpp/c-runtime-library/r
 
 For the Windows implementation of `OperatingSystemImpl.c` this means that the 500 ticks between queries can 
 no longer be fulfilled once the the `clock` call starts reporting `(clock_t)(-1)`. Thereafter, no new queries
-will ever be made and the metrics will be stuck on the previous value that was retireved prior to `clock` 
+will ever be made and the metrics will be stuck on the previous value that was retrieved prior to `clock` 
 exceeding the maximum positive value.
 
 ## The patch
