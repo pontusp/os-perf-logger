@@ -18,7 +18,7 @@ no longer report any new values for `OperatingSystemMXBean::getCpuLoad` or `Oper
 The underlying native operating system implementation for Windows 
 [OperatingSystemImpl.c#L997](https://github.com/openjdk/jdk/blob/master/src/jdk.management/windows/native/libmanagement_ext/OperatingSystemImpl.c#L997)
 limits requests to avoid too frequent querying of system information. This implementation uses [`clock_t clock( void );`](https://learn.microsoft.com/en-us/cpp/c-runtime-library/reference/clock?view=msvc-170)
-for tracing the `lastUpdate` time. To query new system information, at least 500 ticks must have passed since
+for tracking the `lastUpdate` time. To query new system information, at least 500 ticks must have passed since
 the last query. Unfortunately the Windows clock() call is not suitable for long running processes. As stated
 in the [documentation](https://learn.microsoft.com/en-us/cpp/c-runtime-library/reference/clock?view=msvc-170)
 
