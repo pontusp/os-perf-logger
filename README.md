@@ -1,5 +1,9 @@
 # OS performance logger to demonstrate JVM problem on Windows
 
+## Bug report
+
+The problem is tracked in the OpenJDK bug ticket: [JDK-8351359](https://bugs.openjdk.org/browse/JDK-8351359)
+
 ## System and Java runtime information
 
 The problem has been seen on Windows 11, 10 & Windows Server, but should be present on any Windows release.
