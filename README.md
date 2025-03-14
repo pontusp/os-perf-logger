@@ -47,6 +47,9 @@ For limiting how often performance metrics may be retrived, this shall give the 
 except that it continues working after 24.8 days (up until 23:59:59, December 31, 3000, UTC for the `_ftime64()`
 implementation).
 
+See [JDK build on Windows through WSL](https://github.com/pontusp/openjdk-jdk17u/blob/win-dev/doc/windows-wsl-build.md) 
+for the steps I used to build the patched JDK for Windows.
+
 ## Reproducing the issue
 
 The issue can be reproduced and the patch can be seen to resolve the issue by using this simple OS performance
